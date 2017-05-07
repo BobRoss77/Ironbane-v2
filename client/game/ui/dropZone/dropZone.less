@@ -1,0 +1,45 @@
+
+@import "../../../less/variables.import.less";
+
+drop-zone {
+    div {
+        pointer-events: none;
+
+        border: 2px dashed @primary1;
+
+        height: 76px;
+
+        width: 8 * @inv-item-size;
+        margin-left: -4 * @inv-item-size;
+
+        bottom: 3 * @inv-item-size;
+
+        @media only screen and (min-width: 768px) {
+            width: 16 * @inv-item-size;
+            margin-left: -8 * @inv-item-size;
+            bottom: 2 * @inv-item-size;
+        }
+
+        position: fixed;
+
+        left: 50%;
+
+
+        font-size: 20px;
+        box-sizing: border-box;
+        background-color: fadeout(@primary4, 30%);
+        color: @primary1;
+
+        &.hover {
+            background-color: fadeout(@primary4, 10%);
+            // border: 2px dashed @primary2;
+        }
+
+        span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+    }
+}

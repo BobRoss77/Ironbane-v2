@@ -1,0 +1,34 @@
+
+@import "../../../less/variables.import.less";
+
+big-messages-box {
+    position: fixed;
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding-top: 100px;
+    pointer-events: none;
+    li {
+        list-style: none;
+
+        font-size: 25px;
+        color: @primary4;
+        text-shadow: 2px 2px 0px @primary2, -2px 2px 0px @primary2, 2px -2px 0px @primary2, -2px -2px 0px @primary2;
+
+        .deathIcon {
+            @enlargement-factor: 3.0;
+            margin-top: 20px;
+            width: 16px * @enlargement-factor;
+            height: 16px * @enlargement-factor;
+            background-image: url(images/spritesheets/items.png);
+            background-repeat: no-repeat;
+            background-size: (256px * @enlargement-factor) (2048px * @enlargement-factor);
+            image-rendering: pixelated;
+            display: inline-block;
+            background-position: (11 * -16px * @enlargement-factor) (83 * -16px * @enlargement-factor);
+        }
+    }
+}

@@ -1,0 +1,94 @@
+
+@import "../../../less/variables.import.less";
+
+inventory-bar {
+
+    // outline: 1px solid purple;
+    background-color: @primary4;
+    position: fixed;
+    display: block;
+    bottom: 0px;
+    left: 50%;
+    width: 9 * @inv-item-size;
+    height: 2 * @inv-item-size;
+
+    // background-color: rgb(20, 105, 76);
+    // left: 35%;
+    margin-left: -4.5 * @inv-item-size;
+
+    @media only screen and (min-width: 800px) {
+        width: 17 * @inv-item-size;
+        height: 1 * @inv-item-size;
+        margin-left: -8.5 * @inv-item-size;
+    }
+
+    .inventoryBar {
+        // z-index: 3;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            width: @inv-item-size;
+            height: @inv-item-size;
+            display: block;
+            background-size: (256px * @inv-item-size-multiplier) (256px * @inv-item-size-multiplier);
+            display: inline-block;
+            background-image: url(images/ui/inventory.png), url(images/ui/inventory.png);
+            background-repeat: no-repeat;
+            image-rendering: pixelated;
+        }
+    }
+}
+
+@stat-enlargement-factor: 3.0;
+
+#playerIronblood {
+    margin-top: 6px;
+    margin-left: 0px;
+    i.ironblood-icon {
+        width: 16px * @stat-enlargement-factor;
+        height: 16px * @stat-enlargement-factor;
+        background-image: url(images/spritesheets/items.png);
+        background-repeat: no-repeat;
+        background-size: (256px * @stat-enlargement-factor) (2048px * @stat-enlargement-factor);
+        image-rendering: pixelated;
+        display: inline-block;
+        background-position: (12 * -16px * @stat-enlargement-factor) (114 * -16px * @stat-enlargement-factor);
+    }
+    span {
+        font-size: 25px;
+        position: relative;
+        font-family: 'volter_goldfishregular';
+        color: @primary4;
+        left: 7px;
+        top: -12px;
+        text-rendering: optimizeSpeed;
+        text-shadow: 2px 2px 0px spin(@primary1, 140%), -2px 2px 0px spin(@primary1, 140%), 2px -2px 0px spin(@primary1, 140%), -2px -2px 0px spin(@primary1, 140%);
+    }
+}
+
+
+#playerGold {
+    margin-top: 6px;
+    margin-left: 0px;
+    i.gold-icon {
+        width: 16px * @stat-enlargement-factor;
+        height: 16px * @stat-enlargement-factor;
+        background-image: url(images/ui/stats.png);
+        background-repeat: no-repeat;
+        background-size: (64px * @stat-enlargement-factor) (256px * @stat-enlargement-factor);
+        image-rendering: pixelated;
+        display: inline-block;
+        background-position: (0 * -16px * @stat-enlargement-factor) (5 * -16px * @stat-enlargement-factor);
+    }
+    span {
+        font-size: 25px;
+        position: relative;
+        font-family: 'volter_goldfishregular';
+        color: @primary4;
+        left: 7px;
+        top: -12px;
+        text-rendering: optimizeSpeed;
+        text-shadow: 2px 2px 0px spin(@primary1, 260%), -2px 2px 0px spin(@primary1, 260%), 2px -2px 0px spin(@primary1, 260%), -2px -2px 0px spin(@primary1, 260%);
+    }
+}

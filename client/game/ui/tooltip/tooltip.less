@@ -1,0 +1,146 @@
+
+@import "../../../less/variables.import.less";
+
+@tooltipTextColor: @primary1;
+@tooltipBackgroundColor: @primary4;
+@tooltipBorderColor: @tooltipTextColor;
+
+.tooltip {
+  position: absolute;
+  z-index: 1030;
+  display: block;
+  // font-size: 12px;
+  // line-height: 1.4;
+  visibility: visible;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  width: 200px;
+
+  .weak {
+      color: @rarity_weak;
+  }
+
+  .normal {
+      color: @rarity_normal;
+  }
+
+  .strong {
+      color: @rarity_strong;
+  }
+
+  .epic {
+      color: @rarity_epic;
+  }
+
+  .legendary {
+      color: @rarity_legendary;
+  }
+
+  img {
+    margin-bottom: -7px;
+  }
+
+  .stat {
+    display: inline-block;
+    width: 40px;
+    text-align: left;
+  }
+
+}
+.tooltip.in {
+  filter: alpha(opacity=90);
+  opacity: .9;
+}
+.tooltip.top {
+  padding: 5px 0;
+  margin-top: -3px;
+}
+.tooltip.right {
+  padding: 0 5px;
+  margin-left: 3px;
+}
+.tooltip.bottom {
+  padding: 5px 0;
+  margin-top: 3px;
+}
+.tooltip.left {
+  padding: 0 5px;
+  margin-left: -3px;
+}
+.tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: @tooltipTextColor;
+  text-align: center;
+  text-decoration: none;
+  background-color: @tooltipBackgroundColor;
+  border: 3px solid darken(@tooltipBorderColor, 20%);
+
+  span {
+    display: block;
+  }
+}
+
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+@borderMarginWidth: 10px;
+@borderWidth: 10px;
+
+.tooltip.top .tooltip-arrow {
+  bottom: -5px;
+  left: 50%;
+  margin-left: -@borderMarginWidth;
+  border-width: @borderWidth @borderWidth 0;
+  border-top-color: @tooltipBorderColor;
+}
+.tooltip.top-left .tooltip-arrow {
+  bottom: 0;
+  left: @borderMarginWidth;
+  border-width: @borderWidth @borderWidth 0;
+  border-top-color: @tooltipBorderColor;
+}
+.tooltip.top-right .tooltip-arrow {
+  right: @borderMarginWidth;
+  bottom: 0;
+  border-width: @borderWidth @borderWidth 0;
+  border-top-color: @tooltipBorderColor;
+}
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -@borderMarginWidth;
+  border-width: @borderWidth @borderWidth @borderWidth 0;
+  border-right-color: @tooltipBorderColor;
+}
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -@borderMarginWidth;
+  border-width: @borderWidth 0 @borderWidth @borderWidth;
+  border-left-color: @tooltipBorderColor;
+}
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -@borderMarginWidth;
+  border-width: 0 @borderWidth @borderWidth;
+  border-bottom-color: @tooltipBorderColor;
+}
+.tooltip.bottom-left .tooltip-arrow {
+  top: 0;
+  left: @borderMarginWidth;
+  border-width: 0 @borderWidth @borderWidth;
+  border-bottom-color: @tooltipBorderColor;
+}
+.tooltip.bottom-right .tooltip-arrow {
+  top: 0;
+  right: @borderMarginWidth;
+  border-width: 0 @borderWidth @borderWidth;
+  border-bottom-color: @tooltipBorderColor;
+}

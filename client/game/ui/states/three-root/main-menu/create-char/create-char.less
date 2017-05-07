@@ -1,0 +1,62 @@
+
+
+@charWidth : 16px;
+@charHeight : 18px;
+@charPreviewBoxScale : 8;
+@charPreviewBoxWidth : @charWidth * @charPreviewBoxScale;
+@charPreviewBoxHeight : @charHeight * @charPreviewBoxScale;
+
+.ib-ui-login-box {
+
+	.char-title {
+		padding-top: 10px;
+		text-align: center;
+	}
+
+	.del-btn {
+		position: absolute;
+		right: 10px;
+		top: 60px;
+	}
+
+	.playasguest {
+		margin-bottom: 10px;
+	}
+
+	.char-preview {
+		width: @charPreviewBoxWidth;
+		height: @charPreviewBoxHeight;
+		background-repeat: no-repeat;
+		background-size: contain;
+		image-rendering: pixelated;
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+
+	.char-cust {
+		position: absolute;
+
+		&.skin, &.eyes {
+			top: 130px;
+		}
+
+		&.hair, &.eyes {
+			right: 10px;
+		}
+
+		.btn-left {
+			width: 40px;
+			float: left;
+		}
+
+		.btn-right {
+			width: 40px;
+		}
+
+	}
+
+
+
+}
+
